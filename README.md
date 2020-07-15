@@ -1,1 +1,1 @@
-# fibonacci-benchmarking
+# fibonacci-benchmark
