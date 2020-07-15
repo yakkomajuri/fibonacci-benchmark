@@ -10,10 +10,26 @@ The goal was to test the speed of [Nim](https://nim-lang.org/) against Python an
 
 ## How to Run
 
-Make sure you have the "languages" installed before you try to run these programs.
+**1. Make sure you have the "languages" installed before you try to run these programs.**
 
 * [Download Python](https://www.python.org/downloads/)
 * [Download Go](https://golang.org/dl/)
 * [Get Nim](https://nim-lang.org/install.html)
 * [Download GCC](https://gcc.gnu.org/releases.html) (C Compiler)
 
+**2. Compile the files that need to be compiled.**
+
+Nim:
+```
+nim c fibonacci.nim
+```
+
+Go:
+```
+go build fibonacci.go
+```
+
+C:
+```
+gcc fibonacci.c
+```
