@@ -26,10 +26,35 @@ nim c fibonacci.nim
 
 Go:
 ```
-go build fibonacci.go
+go build fibonacci.go -o fib
 ```
 
 C:
 ```
 gcc fibonacci.c
 ```
+
+**3. Run and time the programs**
+
+To time the programs I used the `time` command in Bash. The first run of each program after system startup should be discarded, and we're interested in the "real" time.
+
+Nim:
+```
+time ./fibonacci
+```
+
+Go:
+```
+time ./fib
+```
+
+C:
+```
+time ./a.out
+```
+
+Python:
+```
+time python3 fibonacci.py
+```
+
