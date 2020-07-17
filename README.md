@@ -6,6 +6,8 @@
 
 ### Originally published in the article [A Python Substitute? I Tried Out the Best Programming Language You’ve Never Heard Of](https://medium.com/better-programming/a-python-substitute-i-tried-out-the-best-programming-language-youve-never-heard-of-9e29cd1893c0?source=friends_link&sk=61b12cfd6456f992013ba61e710efc72).
 
+<hr>
+
 In this experiment I compared speed of execution of a program to print the n-th Fibonacci number.
 
 The goal was to test the speed of [Nim](https://nim-lang.org/) against Python and C, with Go being added later.
