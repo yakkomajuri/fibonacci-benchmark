@@ -23,9 +23,14 @@ The goal was to test the speed of [Nim](https://nim-lang.org/) against Python an
 
 **2. Compile the files that need to be compiled.**
 
-Nim:
+Nim (Original Method - Used in article):
 ```
 nim c fibonacci.nim
+```
+
+Nim (Suggested Method - Optimized version, [suggested to me after the article](#important-note):
+```
+nim c -d:release fibonacci.nim
 ```
 
 Go:
@@ -61,4 +66,18 @@ Python:
 ```
 time python3 fibonacci.py
 ```
+
+## Important Note
+
+After writing the article, it was pointed out to me that by simply passing optimization flags to the Nim compiler I could improve the speed of execution by over 10x. This happens because, as stated in the Official Docs: “By default the Nim compiler generates a large amount of runtime checks aiming for your debugging pleasure. With `-d:release` some checks are turned off and optimizations are turned on.” 
+
+Besides `-d:release`, there are also other flags that can optimize the runtime even further. Here's a table provided by [sschwarzer](https://github.com/sschwarzer) denoting the different options accepted by the compiler and their impact on runtime.
+
+| Compilation |	Runtime in s |	Remarks |
+| :---------: | :-----------:| :-------:|
+|nim c fibonacci.nim	|3.3	|without any runtime optimization, but faster compilation
+|nim c -d:release fibonacci.nim	|0.56	|with optimization
+|nim c -d:release -d:danger fibonacci.nim|	0.29|	without runtime checks
+|nim c -d:release --gc:arc fibonacci.nim	|0.31	|new memory management approach
+|nim c -d:release -d:danger --gc:arc fibonacci.nim	|0.30	| all combined
 
